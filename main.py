@@ -9,9 +9,9 @@ def openWindow():
 
     calendar.config(background="white")
 
-    calendar.title("Year")
+    calendar.title(f"Calendar of year {int(enteryear.get())}")
 
-    # calendar.calendar(enterededyear)
+    calendar.calendar(int(enteryear.get()))
 
 
 if __name__ == "__main__":
@@ -41,11 +41,8 @@ if __name__ == "__main__":
     exit = Button(gui, text = "Exit", bg= "dark gray", font=("times new roman",14,"bold"), command=exit)
     exit.grid(row=5, column=1, pady=10)
     gui.mainloop()
+
     enterededyear = int(enteryear.get())
-
-
-    # year = int(enteryear.get)
-
 
 
 
