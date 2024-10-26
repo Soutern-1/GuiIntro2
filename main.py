@@ -1,17 +1,24 @@
 from tkinter import *
+import calendar
 
 
 def openWindow():
 
-    calendar = Tk()
+    calendarWindow = Tk()
 
-    calendar.geometry("1000x1000")
+    calendarWindow.geometry("1000x1000")
 
-    calendar.config(background="white")
+    calendarWindow.config(background="white")
 
-    calendar.title(f"Calendar of year {int(enteryear.get())}")
+    calendarWindow.title(f"Calendar of year {int(enteryear.get())}")
 
-    calendar.calendar(int(enteryear.get()))
+    calendar_text = calendarWindow.calendar(int(enteryear.get()))
+
+    cal_year = Label(calendarWindow, text=calendar_text, font="Times New Roman 10 bold")
+
+    cal_year.grid(row=1,column=1, padx=30, pady=30)
+
+    calendarWindow.mainloop()
 
 
 if __name__ == "__main__":
@@ -43,6 +50,8 @@ if __name__ == "__main__":
     gui.mainloop()
 
     enterededyear = int(enteryear.get())
+
+
 
 
 
